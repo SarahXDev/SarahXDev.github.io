@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sarah Tahsin — Developer &amp; Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f3ff;--gl:rgba(255,255,255,.72);--bd:rgba(40,30,90,.12);--ink:#17142e;--mute:#5d5a80;--a:#7c4dff;--b:#e0409a;--c:#f59e0b;--cy:#0ea5c6;--orb:.35}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07070f;--gl:rgba(255,255,255,.05);--bd:rgba(255,255,255,.11);--ink:#f1f0ff;--mute:#a6a4c8;--a:#8b6cff;--b:#ec4899;--cy:#22d3ee;--orb:.55}}
+:root[data-theme="dark"]{--bg:#07070f;--gl:rgba(255,255,255,.05);--bd:rgba(255,255,255,.11);--ink:#f1f0ff;--mute:#a6a4c8;--a:#8b6cff;--b:#ec4899;--cy:#22d3ee;--orb:.55}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.sora{font-family:Sora,Inter,sans-serif}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);opacity:var(--orb);z-index:0;pointer-events:none;animation:dr 18s ease-in-out infinite}
+.o1{width:420px;height:420px;background:var(--a);top:-120px;left:-120px}.o2{width:380px;height:380px;background:var(--b);right:-140px;top:30%;animation-delay:-6s}.o3{width:340px;height:340px;background:var(--cy);bottom:-120px;left:25%;animation-delay:-11s;opacity:calc(var(--orb) * .7)}
+@keyframes dr{50%{transform:translate(60px,-70px) scale(1.15)}}
+#glow{position:fixed;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(139,108,255,.22),transparent 65%);pointer-events:none;z-index:1;translate:-50% -50%;left:-400px;top:-400px}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:30}
+nav.pill{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;transform:translateX(-50%);z-index:20;max-width:calc(100% - 24px);overflow-x:auto;scrollbar-width:none;display:flex;gap:2px;padding:6px;border-radius:999px;background:var(--gl);border:1px solid var(--bd);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+nav.pill::-webkit-scrollbar{display:none}
+nav.pill a{padding:8px 14px;border-radius:999px;color:var(--mute);text-decoration:none;font-size:.82rem;font-weight:600;white-space:nowrap;transition:all .25s}
+nav.pill a.on,nav.pill a:hover{background:linear-gradient(120deg,var(--a),var(--b));color:#fff}
+main,section{position:relative;z-index:2}
+.w{max-width:1100px;margin:auto;padding:0 20px}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:90px;text-align:center}
+.kick{display:inline-block;margin:0 auto 22px;padding:8px 18px;border-radius:999px;border:1px solid var(--bd);background:var(--gl);font-size:.82rem;color:var(--mute)}
+.kick i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:8px;animation:pu 2s infinite}
+@keyframes pu{50%{box-shadow:0 0 0 7px rgba(34,197,94,0)}0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}}
+h1{font-size:clamp(3rem,14vw,7.2rem);line-height:.98;letter-spacing:-.04em;font-weight:800}
+.gt{background:linear-gradient(110deg,var(--a),var(--b),var(--c),var(--a));background-size:250%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 7s linear infinite}
+@keyframes sh{to{background-position:250% 0}}
+.role{font-size:clamp(1.1rem,4.5vw,1.8rem);font-weight:600;margin:18px 0 14px;min-height:2.4em}
+.cr{display:inline-block;width:3px;height:1.1em;background:var(--b);margin-left:4px;vertical-align:-.15em;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.sub{color:var(--mute);max-width:58ch;margin:0 auto 28px;font-size:1.05rem}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;margin:0 6px 12px;border:1px solid var(--bd);background:var(--gl);color:var(--ink);transition:transform .25s,box-shadow .25s;cursor:pointer;font-family:inherit}
+.btn.p{background:linear-gradient(120deg,var(--a),var(--b));color:#fff;border:0;box-shadow:0 10px 30px rgba(124,77,255,.35)}
+.btn:hover{transform:translateY(-4px) scale(1.03)}
+.mq{overflow:hidden;margin:46px 0 0;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq div{display:flex;gap:12px;width:max-content;animation:mv 32s linear infinite}
+.mq span{padding:9px 20px;border-radius:999px;border:1px solid var(--bd);background:var(--gl);font-size:.88rem;font-weight:600;white-space:nowrap}
+@keyframes mv{to{transform:translateX(-50%)}}
+.sec{padding:96px 0 30px}
+.tag{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:linear-gradient(120deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(2rem,7vw,3.4rem);letter-spacing:-.03em;line-height:1.08;margin:8px 0 12px;font-weight:800}
+.lead{color:var(--mute);max-width:60ch;margin-bottom:32px}
+.gl{background:var(--gl);border:1px solid var(--bd);border-radius:26px;padding:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .3s,border-color .3s,box-shadow .3s;will-change:transform}
+.gl:hover{border-color:var(--a);box-shadow:0 20px 50px rgba(124,77,255,.18)}
+.bento{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.bento .big{grid-column:span 2}
+@media(min-width:820px){.bento{grid-template-columns:repeat(4,1fr)}.bento .big{grid-column:span 2}}
+.bento h3{font-size:1.15rem;margin-bottom:8px}.bento p{color:var(--mute);font-size:.95rem}
+.num{font-family:Sora,sans-serif;font-size:2.8rem;font-weight:800;line-height:1}.num+small{display:block;color:var(--mute);margin-top:6px}
+.pj{display:grid;gap:16px}
+@media(min-width:760px){.pj{grid-template-columns:repeat(2,1fr)}}
+.pc{cursor:pointer;position:relative;overflow:hidden}
+.pc .n{position:absolute;right:18px;top:6px;font-family:Sora,sans-serif;font-size:4.4rem;font-weight:800;opacity:.09}
+.pc h3{font-size:1.35rem;margin:4px 0 8px}.pc p{color:var(--mute);font-size:.95rem}
+.ty{display:inline-block;padding:4px 12px;border-radius:999px;font-size:.74rem;font-weight:700;color:#fff;background:linear-gradient(120deg,var(--a),var(--b))}
+.ch{display:inline-block;padding:5px 13px;margin:8px 6px 0 0;border-radius:999px;border:1px solid var(--bd);font-size:.8rem;transition:all .2s}.ch:hover{background:var(--a);color:#fff;transform:scale(1.07)}
+.more{max-height:0;overflow:hidden;transition:max-height .5s ease}.pc.open .more{max-height:200px}
+.more div{margin-top:14px;padding-left:14px;border-left:3px solid var(--b);font-size:.93rem}
+.hint{font-size:.78rem;color:var(--mute);margin-top:14px}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.fl button{font:inherit;font-weight:600;font-size:.85rem;padding:9px 18px;border-radius:999px;border:1px solid var(--bd);background:var(--gl);color:var(--ink);cursor:pointer;transition:all .25s}
+.fl button.on{background:linear-gradient(120deg,var(--a),var(--b));color:#fff;border-color:transparent}
+.dg{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.dg{grid-template-columns:repeat(4,1fr)}}
+.dc{padding:12px;border-radius:22px;transition:transform .3s,opacity .3s}.dc.hd{display:none}
+.dc .v{height:120px;border-radius:14px;margin-bottom:12px;display:grid;place-items:center;font-size:2rem;position:relative;overflow:hidden}
+.dc .v::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35),transparent 70%);translate:-120% 0;transition:translate .7s}
+.dc:hover .v::after{translate:120% 0}
+.dc h3{font-size:.95rem;line-height:1.25}.dc small{color:var(--mute);display:block;margin:2px 0 8px;font-size:.78rem}
+.dc a{font-size:.82rem;font-weight:700;color:var(--a);text-decoration:none}
+.sk{display:grid;gap:14px}
+@media(min-width:760px){.sk{grid-template-columns:repeat(3,1fr)}}
+.sk h3{font-size:1rem;margin-bottom:6px}
+.lg{display:grid;gap:14px}
+@media(min-width:760px){.lg{grid-template-columns:repeat(3,1fr)}}
+.lg h3{font-size:1.2rem}.lg small{color:var(--mute)}
+.dots{margin:12px 0 4px;display:flex;gap:6px}.dots i{width:100%;height:8px;border-radius:99px;background:var(--bd)}.dots i.f{background:linear-gradient(90deg,var(--a),var(--b))}
+.tl{position:relative;padding-left:26px;margin-top:8px}.tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a),var(--b),transparent)}
+.ti{position:relative;margin-bottom:22px}.ti::before{content:"";position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--b);box-shadow:0 0 0 5px rgba(236,72,153,.2)}
+.ti b{font-size:1.05rem}.ti small{display:block;color:var(--mute)}.ti p{color:var(--mute);font-size:.93rem;margin-top:4px}
+.cvg{display:grid;gap:16px}@media(min-width:860px){.cvg{grid-template-columns:1.3fr 1fr}}
+.cta{text-align:center;padding:60px 24px}
+.cta h2{margin-top:0}.cta .btn{margin-top:6px}
+footer{text-align:center;color:var(--mute);font-size:.85rem;padding:40px 0 50px;position:relative;z-index:2}
+.rv{opacity:0;transform:translateY(34px) scale(.98);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div id="glow"></div><div id="pg"></div>
+<nav class="pill" id="nv"><a href="#home">Home</a><a href="#work">Work</a><a href="#sites">Websites</a><a href="#design">Canva</a><a href="#skills">Skills</a><a href="#langs">Languages</a><a href="#cv">CV</a><a href="#contact">Contact</a></nav>
+
+<main class="w" id="home"><div class="hero">
+  <div class="rv"><span class="kick"><i></i>Computer Science graduate · Erbil, Iraq</span></div>
+  <h1 class="rv"><span class="gt">Sarah<br>Tahsin</span></h1>
+  <div class="role rv"><span id="ty"></span><span class="cr"></span></div>
+  <p class="sub rv">I build responsive websites, Flutter apps and database‑backed systems, and I design visuals that make them look good.</p>
+  <div class="rv"><a class="btn p" href="#work">See my work</a><a class="btn" href="#cv">View my CV</a></div>
+  <div class="mq rv"><div id="mq"></div></div>
+</div></main>
+
+<section class="sec" id="about"><div class="w">
+  <span class="tag rv">About me</span><h2 class="rv">Code, data and design in one place</h2>
+  <div class="bento">
+    <div class="gl big rv"><h3>Who I am</h3><p>A 2025 Computer Science graduate who builds clean web and mobile products, from admin dashboards to cross‑platform apps, supported by networking and data analysis. I also design social posts, planners and printable journals.</p></div>
+    <div class="gl rv"><div class="num gt" data-to="84.94" data-d="2">0</div><small>Overall average (%)</small></div>
+    <div class="gl rv"><div class="num gt" data-to="5">0</div><small>Major projects</small></div>
+    <div class="gl rv"><h3>Education</h3><p>B.Sc. Computer Science<br>Cihan University, Oct 2025</p></div>
+    <div class="gl rv"><h3>Internship</h3><p>Asiacell OSOS Program, 2024</p></div>
+    <div class="gl big rv"><h3>Top marks</h3><p>Software Engineering 100 · Network Administration 98 · Embedded Systems 97 · Mobile App Development 96</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="work"><div class="w">
+  <span class="tag rv">Projects</span><h2 class="rv">Things I’ve built</h2><p class="lead rv">Tap a card to see what I built.</p>
+  <div class="pj" id="pj"></div>
+</div></section>
+
+<section class="sec" id="sites"><div class="w">
+  <span class="tag rv">Websites</span><h2 class="rv">Websites I designed and coded</h2><p class="lead rv">Four landing pages, each with a cover I designed in Canva. The code is on my GitHub.</p>
+  <div class="dg">
+    <div class="gl dc rv"><div class="v" style="height:150px;font-size:2.6rem;background:linear-gradient(135deg,#0b0b0b,#b8860b)">⌚</div><h3>LuxChronos</h3><small>Luxury watch landing page · elegant UI, responsive layout</small><a href="https://github.com/SarahXDev/Luxury-Watch-Landing-Page-LuxChronos" target="_blank" rel="noopener">View on GitHub →</a></div>
+    <div class="gl dc rv"><div class="v" style="height:150px;font-size:2.6rem;background:linear-gradient(135deg,#2b0a14,#d4a017)">💎</div><h3>Velvet Control</h3><small>Black &amp; gold business landing page · interactive ROI calculator</small><a href="https://github.com/SarahXDev/velvet-control-landing-page" target="_blank" rel="noopener">View on GitHub →</a></div>
+    <div class="gl dc rv"><div class="v" style="height:150px;font-size:2.6rem;background:linear-gradient(135deg,#111827,#d4af37)">💼</div><h3>Luxury Business Landing Page</h3><small>Black &amp; gold UI · features, pricing plans, responsive layout</small><a href="https://github.com/SarahXDev/Luxury-Business-Landing-Page-Black-Gold-UI-" target="_blank" rel="noopener">View on GitHub →</a></div>
+    <div class="gl dc rv"><div class="v" style="height:150px;font-size:2.6rem;background:linear-gradient(135deg,#6d3b4c,#f0d9c4)">✦</div><h3>Premium Branding Website</h3><small>Landing page for branding agencies · clean UI, high‑conversion UX</small><a href="https://github.com/SarahXDev/premium-branding-website" target="_blank" rel="noopener">View on GitHub →</a></div>
+  </div>
+  <p style="margin-top:22px"><a class="btn" href="https://github.com/SarahXDev?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub</a></p>
+</div></section>
+
+<section class="sec" id="design"><div class="w">
+  <span class="tag rv">Design</span><h2 class="rv">My Canva designs</h2><p class="lead rv">Notebooks, graduation, food and planner designs, separate from the website covers above. Tap to open each design on Canva.</p>
+  <div class="fl" id="fl"></div><div class="dg" id="dg"></div>
+  <p style="margin-top:22px"><a class="btn p" href="https://pin.it/VWPHNX8wN" target="_blank" rel="noopener">More on Pinterest · Golden Iris Co</a></p>
+</div></section>
+
+<section class="sec" id="skills"><div class="w">
+  <span class="tag rv">Skills</span><h2 class="rv">My toolkit</h2>
+  <div class="sk" id="sk"></div>
+</div></section>
+
+<section class="sec" id="langs"><div class="w">
+  <span class="tag rv">Languages</span><h2 class="rv">Languages I speak and code in</h2>
+  <div class="lg">
+    <div class="gl rv"><h3>Arabic</h3><small>Native</small><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></div></div>
+    <div class="gl rv"><h3>English</h3><small>Excellent · professional proficiency</small><div class="dots"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></div></div>
+    <div class="gl rv"><h3>Kurdish</h3><small>Beginner · learning</small><div class="dots"><i class="f"></i><i></i><i></i><i></i><i></i></div></div>
+  </div>
+  <div class="gl rv" style="margin-top:14px"><h3 class="sora" style="margin-bottom:6px">Programming languages</h3>
+    <span class="ch">PHP</span><span class="ch">Python</span><span class="ch">Dart</span><span class="ch">SQL</span><span class="ch">JavaScript</span><span class="ch">HTML5</span><span class="ch">CSS3</span><span class="ch">C / C++</span></div>
+</div></section>
+
+<section class="sec" id="cv"><div class="w">
+  <span class="tag rv">Résumé</span><h2 class="rv">My CV at a glance</h2>
+  <div class="cvg">
+    <div class="gl rv"><div class="tl">
+      <div class="ti"><b>B.Sc. in Computer Science</b><small>Cihan University, Erbil · 2021 – Oct 2025 · Average 84.94%</small><p>Networks, operating systems, databases, mobile development, machine learning and information security.</p></div>
+      <div class="ti"><b>Technical Trainer (OSOS Intern)</b><small>Asiacell Communications · Jul 2024</small><p>IT operations, network support and mobile app troubleshooting in a large telecom enterprise. OSOS certified.</p></div>
+      <div class="ti"><b>Designer · Golden Iris Co</b><small>Canva and Pinterest · ongoing</small><p>Web templates, planners and printable journals.</p></div>
+    </div></div>
+    <div class="gl rv"><h3 class="sora" style="margin-bottom:8px">Summary</h3><p style="color:var(--mute);font-size:.95rem">Entry‑level candidate for IT support, software development, front‑end or data roles. Strong with Windows, Microsoft 365, SQL databases, Flutter, React and visual design.</p>
+      <p style="margin-top:16px"><a class="btn p" style="margin-left:0" href="mailto:sarah.t.dev@gmail.com?subject=CV%20request">Request my full CV</a></p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="contact"><div class="w"><div class="gl cta rv">
+  <span class="tag">Contact</span><h2>Let’s work together</h2><p class="sub">I’m looking for my first role. Email is the fastest way to reach me.</p>
+  <a class="btn p" href="mailto:sarah.t.dev@gmail.com">sarah.t.dev@gmail.com</a><br>
+  <a class="btn" href="https://www.linkedin.com/in/sarah-tahsin-mznd-11464b252" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/SarahXDev" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://pin.it/VWPHNX8wN" target="_blank" rel="noopener">Pinterest</a>
+</div></div></section>
+<footer>© 2026 Sarah Tahsin · Erbil, Iraq</footer>
+
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
+function rv(){document.querySelectorAll(".rv:not(.in)").forEach(function(el){io.observe(el)})}
+
+var P=[["Mobile app","University Smart App","A full university app planned and delivered independently.","Six modules with secure sign‑in and real‑time data sync.",["Flutter","Firebase","Firestore"]],
+["Web app","Pharmacy Skincare CMS","An admin dashboard for products, pricing and categories.","Secure login, role‑based access, cart, wishlist and the MySQL schema.",["PHP","MySQL","JavaScript"]],
+["Mobile · AR","AR Campus Navigation","Helps students find departments and facilities.","An AR navigation workflow linked to Firebase, tested across campus.",["Flutter","Firebase","AR"]],
+["Data / ML","Heart Disease Prediction","Predicts heart disease risk from patient data.","Data cleaning, exploration, logistic regression and evaluation.",["Python","Pandas","Scikit‑learn"]],
+["IoT","Smart Car Robot","An autonomous Arduino car with obstacle avoidance.","C/C++ firmware, Bluetooth, ultrasonic and IR sensors, full testing.",["Arduino","C / C++","Sensors"]]];
+document.getElementById("pj").innerHTML=P.map(function(p,i){return '<article class="gl pc rv"><span class="n">0'+(i+1)+'</span><span class="ty">'+p[0]+'</span><h3>'+p[1]+'</h3><p>'+p[2]+'</p><div class="more"><div><b>What I built:</b> '+p[3]+'</div></div>'+p[4].map(function(t){return '<span class="ch">'+t+'</span>'}).join("")+'<div class="hint">Tap for details</div></article>'}).join("");
+document.querySelectorAll(".pc").forEach(function(c){c.onclick=function(){c.classList.toggle("open")}});
+
+var D=[["Planners & guides","University Student Planner","Planner design","📅","linear-gradient(135deg,#5eead4,#6366f1)","https://www.canva.com/d/8W8L9Vvw5aCd-wl"],
+["Planners & guides","Aesthetic Daily Journal","Printable journal","📓","linear-gradient(135deg,#d6c3a5,#f5e9d6)","https://www.canva.com/d/YZd4k3f--aNhQQJ"],
+["Planners & guides","دليل أفكار مشاريع تخرج","Graduation projects guide","🎓","linear-gradient(135deg,#6366f1,#ec4899)","https://www.canva.com/d/8ZPD3aMpeU6dJiP"],
+["Food posts","Big BURGER","Social post","🍔","linear-gradient(135deg,#ef4444,#f59e0b)","https://www.canva.com/d/tvytkq_c0ehnela"],
+["Food posts","Pizza Special","Social post","🍕","linear-gradient(135deg,#f97316,#facc15)","https://www.canva.com/d/lmHQnDegT-6LZkh"],
+["Food posts","Fresh Juice","Social post","🍹","linear-gradient(135deg,#fb923c,#f43f5e)","https://www.canva.com/d/M0ug7HFB-yC_1OM"],
+["Food posts","قهوه البيت اصيله","Arabic social post","☕","linear-gradient(135deg,#78350f,#d97706)","https://www.canva.com/d/masROdBX2VycZKv"],
+["Food posts","طعم لايقاوم","Arabic social post","😋","linear-gradient(135deg,#dc2626,#fb923c)","https://www.canva.com/d/HWyvfp5Y9TUQlN7"],
+["Branding","Golden Iris Co Logo","Vintage modern logo","🌸","linear-gradient(135deg,#1e1b4b,#a16207)","https://www.canva.com/d/M4JZZ0UZOyVP1oy"],
+["Branding","Opulent Iris Logo","Logo with iris icon","⚜️","linear-gradient(135deg,#0f172a,#ca8a04)","https://www.canva.com/d/cOjdS865fjojc6N"]];
+D=[["Notebooks","Aesthetic Daily Journal","Printable journal","📓","linear-gradient(135deg,#d6c3a5,#f5e9d6)","https://www.canva.com/d/LVmaIOkjod-H1zu"],
+["Notebooks","Notebook design","12 pages","📒","linear-gradient(135deg,#a78bfa,#f9a8d4)","https://www.canva.com/d/tAEgwgsrh32pM8o"],
+["Notebooks","Notebook design","42 pages","📔","linear-gradient(135deg,#6366f1,#22d3ee)","https://www.canva.com/d/LTL9atMTJBr43Tq"],
+["Notebooks","Journal design","Printable page","✍️","linear-gradient(135deg,#8b7355,#e8dcc8)","https://www.canva.com/d/iqpw4i9FNW38jOu"],
+["Graduation","دليل أفكار مشاريع تخرج","Graduation projects guide","🎓","linear-gradient(135deg,#6366f1,#ec4899)","https://www.canva.com/d/fbDyWQVnEKsx12b"],
+["Food designs","Big BURGER","Social post","🍔","linear-gradient(135deg,#ef4444,#f59e0b)","https://www.canva.com/d/tvytkq_c0ehnela"],
+["Food designs","Pizza Special","Social post","🍕","linear-gradient(135deg,#f97316,#facc15)","https://www.canva.com/d/lmHQnDegT-6LZkh"],
+["Food designs","Fresh Juice","Social post","🍹","linear-gradient(135deg,#fb923c,#f43f5e)","https://www.canva.com/d/M0ug7HFB-yC_1OM"],
+["Food designs","Coffee Time","Social post","☕","linear-gradient(135deg,#78350f,#d97706)","https://www.canva.com/d/_zPClTr9qIlnZ0X"],
+["Food designs","قهوه البيت اصيله","Arabic social post","🫖","linear-gradient(135deg,#3b2a20,#b8793f)","https://www.canva.com/d/masROdBX2VycZKv"],
+["Food designs","طعم لايقاوم","Arabic social post","😋","linear-gradient(135deg,#dc2626,#fb923c)","https://www.canva.com/d/HWyvfp5Y9TUQlN7"],
+["Planners & study","University Student Planner","Study planner","📅","linear-gradient(135deg,#5eead4,#6366f1)","https://www.canva.com/d/8W8L9Vvw5aCd-wl"],
+["Planners & study","Korean Beauty Planner","Planner design","🌸","linear-gradient(135deg,#fbcfe8,#c4b5fd)","https://www.canva.com/d/lgoeMA1ju15M79T"],
+["Planners & study","Cute Korean Beauty Planner","Planner design","🎀","linear-gradient(135deg,#fda4af,#fde68a)","https://www.canva.com/d/oS8jxQG2QC7EL-P"]];
+var dg=document.getElementById("dg"),fl=document.getElementById("fl"),cats=["All","Notebooks","Graduation","Food designs","Planners & study"];
+dg.innerHTML=D.map(function(d){return '<div class="gl dc rv" data-c="'+d[0]+'"><div class="v" style="background:'+d[4]+'">'+d[3]+'</div><h3 dir="auto">'+d[1]+'</h3><small>'+d[2]+'</small><a href="'+d[5]+'" target="_blank" rel="noopener">Open on Canva →</a></div>'}).join("");
+cats.forEach(function(c,i){var b=document.createElement("button");b.textContent=c;if(!i)b.className="on";b.onclick=function(){fl.querySelectorAll("button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");dg.querySelectorAll(".dc").forEach(function(el){el.classList.toggle("hd",c!=="All"&&el.dataset.c!==c)})};fl.appendChild(b)});
+
+var S={"Web":["HTML5 · CSS3 · JavaScript","React","PHP","Responsive front‑end"],"Mobile":["Flutter & Dart","Firebase & Firestore","Android Studio"],"Data & DB":["SQL & relational databases","MySQL","Python · Pandas · Scikit‑learn","Excel · Power BI (basic)"],"IT & Network":["Windows & Microsoft 365","TCP/IP · routing & switching","Troubleshooting","Network security"],"Design":["Canva","UI / UX design","Visual layouts"],"Tools":["Git (basic)","VS Code","MS Office · Project"]};
+document.getElementById("sk").innerHTML=Object.keys(S).map(function(k){return '<div class="gl rv"><h3>'+k+'</h3>'+S[k].map(function(t){return '<span class="ch">'+t+'</span>'}).join("")+'</div>'}).join("");
+var m=["Flutter","React","PHP","MySQL","SQL","Python","Firebase","Canva","UI/UX","Networking","Windows","Microsoft 365","Git","C/C++","Arduino"];
+document.getElementById("mq").innerHTML=m.concat(m).map(function(x){return "<span>"+x+"</span>"}).join("");
+rv();
+
+var w=["Computer Science graduate","Front‑end & Flutter developer","Database & data enthusiast","Canva & UI designer"],wi=0,ci=0,del=false,t=document.getElementById("ty");
+(function tick(){var s=w[wi];t.textContent=s.slice(0,ci);if(!del&&ci===s.length){del=true;return setTimeout(tick,1600)}if(del&&ci===0){del=false;wi=(wi+1)%w.length}ci+=del?-1:1;setTimeout(tick,del?30:65)})();
+
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,to=parseFloat(el.dataset.to),d=+el.dataset.d||0,s=null;(function f(ts){s=s||ts;var p=Math.min((ts-s)/1500,1);el.textContent=(to*(1-Math.pow(1-p,3))).toFixed(d);if(p<1)requestAnimationFrame(f)})(performance.now())})},{threshold:.6});
+document.querySelectorAll(".num").forEach(function(n){co.observe(n)});
+
+var pg=document.getElementById("pg");addEventListener("scroll",function(){var h=document.documentElement;pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+if(matchMedia("(hover:hover)").matches){var g=document.getElementById("glow");addEventListener("pointermove",function(e){g.style.left=e.clientX+"px";g.style.top=e.clientY+"px"});
+document.addEventListener("pointermove",function(e){var c=e.target.closest&&e.target.closest(".gl");if(!c||c.classList.contains("cta"))return;var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(800px) rotateY("+x*7+"deg) rotateX("+-y*7+"deg)"});
+document.addEventListener("pointerout",function(e){var c=e.target.closest&&e.target.closest(".gl");if(c)c.style.transform=""})}
+
+var ls=document.querySelectorAll("#nv a"),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ls.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{threshold:.3});
+["home","work","sites","design","skills","langs","cv","contact"].forEach(function(id){so.observe(document.getElementById(id))});
+})();
+</script>
+</body>
+</html>
